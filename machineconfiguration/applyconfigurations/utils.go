@@ -85,6 +85,8 @@ func ForKind(kind schema.GroupVersionKind) interface{} {
 		return &machineconfigurationv1alpha1.PinnedImageSetApplyConfiguration{}
 	case v1alpha1.SchemeGroupVersion.WithKind("PinnedImageSetSpec"):
 		return &machineconfigurationv1alpha1.PinnedImageSetSpecApplyConfiguration{}
+	case v1alpha1.SchemeGroupVersion.WithKind("PinnedImageSetStatus"):
+		return &machineconfigurationv1alpha1.PinnedImageSetStatusApplyConfiguration{}
 
 	}
 	return nil

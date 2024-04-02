@@ -176,6 +176,10 @@ var schemaYAML = typed.YAMLObject(`types:
       type:
         namedType: com.github.openshift.api.machineconfiguration.v1alpha1.PinnedImageSetSpec
       default: {}
+    - name: status
+      type:
+        namedType: com.github.openshift.api.machineconfiguration.v1alpha1.PinnedImageSetStatus
+      default: {}
 - name: com.github.openshift.api.machineconfiguration.v1alpha1.PinnedImageSetSpec
   map:
     fields:
@@ -187,6 +191,17 @@ var schemaYAML = typed.YAMLObject(`types:
           elementRelationship: associative
           keys:
           - name
+- name: com.github.openshift.api.machineconfiguration.v1alpha1.PinnedImageSetStatus
+  map:
+    fields:
+    - name: conditions
+      type:
+        list:
+          elementType:
+            namedType: io.k8s.apimachinery.pkg.apis.meta.v1.Condition
+          elementRelationship: associative
+          keys:
+          - type
 - name: io.k8s.apimachinery.pkg.apis.meta.v1.Condition
   map:
     fields:
