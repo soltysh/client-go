@@ -66,3 +66,5 @@ retract v3.9.0+incompatible
 // To make go aware of the retraction, we need to tag a new version that can be
 // retracted by itself.
 retract v0.0.1
+
+replace github.com/openshift/api v0.0.0-20240323003854-2252c7adfb79 => github.com/dinhxuanvu/openshift-api v0.0.0-20240402064831-ef66856341d1
