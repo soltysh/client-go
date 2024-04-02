@@ -66,5 +66,3 @@ retract v3.9.0+incompatible
 // To make go aware of the retraction, we need to tag a new version that can be
 // retracted by itself.
 retract v0.0.1
-
-replace k8s.io/kube-openapi => github.com/openshift/kube-openapi v0.0.0-20240228011516-70dd3763d340
